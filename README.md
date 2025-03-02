@@ -1,2 +1,2 @@
-# tinygreens-co
-The tinygreens.co website
+# Tiny Greens Company Website
+Work In Progress
