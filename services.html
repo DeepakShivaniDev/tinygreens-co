@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tiny Greens Co.</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/small-business.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:400,300,500,700|Montserrat:400,600' rel='stylesheet'>
+    <title>Our Services - Tiny Greens Co.</title>
 </head>
-
 <body>
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
@@ -47,37 +46,48 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Big Nutrition in Tiny Leaves!</h1>
+            <h1>Our Services</h1>
             <hr>
-            <p class="subtitle">Join the green revolution today!</p>
-            <div class="cta-buttons" style="margin-top: 30px;">
-                <a href="products/plants.html" class="btn btn-lg btn-success">Shop Now</a>
-                <a href="#subscription" class="btn btn-lg btn-outline-light">Subscribe</a>
-                <a href="products/equipment.html" class="btn btn-lg btn-outline-light">Explore DIY Kits</a>
-            </div>
+            <p class="subtitle">List of services we related to hydroponics and farming</p>
         </div>
     </header>
-
-    <section class="content-section" id="subscription">
+    
+    <section class="service-section">
         <div class="container">
-            <h2 class="text-center">Subscription Plans</h2>
+            <h2>Our Services</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="service-item">
-                        <h3>Starter Pack</h3>
-                        <p>2 microgreens varieties/week</p>
+                        <h3>Fresh Microgreens Supply</h3>
+                        <ul>
+                            <li>Home subscriptions</li>
+                            <li>Restaurant bulk supply</li>
+                            <li>Grocery store partnerships</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="service-item">
-                        <h3>Health Booster</h3>
-                        <p>4 varieties/week</p>
+                        <h3>Hydroponic Systems</h3>
+                        <ul>
+                            <li>Home & commercial setups</li>
+                            <li>Nutrient solutions</li>
+                            <li>Vertical grow towers</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="service-item">
-                        <h3>Chef's Choice</h3>
-                        <p>6 varieties/week + free recipes</p>
+                        <h3>DIY Microgreens Kits</h3>
+                        <p>Complete starter kits with organic seeds and growing guides</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <h3>Workshops & Consulting</h3>
+                        <p>Online/offline training for urban farming</p>
                     </div>
                 </div>
             </div>
@@ -99,20 +109,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Navbar scroll effect
-        $(window).scroll(function() {
-            $('.navbar-custom').toggleClass('scrolled', $(this).scrollTop() > 100);
-        });
-    
-        // Initialize dropdowns
-        $(document).ready(function(){
-            $('.dropdown-toggle').dropdown();
+        $(function() {
+            $(window).scroll(function() {
+                $('.navbar-custom').toggleClass('scrolled', $(this).scrollTop() > 100);
+            });
             
-            // Add active class to current page
             const currentPage = location.pathname.split('/').pop();
             $('nav a[href="' + currentPage + '"]').parent().addClass('active');
             
-            // Handle dropdown parent activation
             if (currentPage.includes('plants') || currentPage.includes('equipment')) {
                 $('.dropdown').addClass('active');
             }
